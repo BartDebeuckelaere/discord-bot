@@ -4,8 +4,8 @@ const fetch = require('node-fetch');
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-//client.login(process.env.token);
-client.login('NzgyMzQyNjE5NjIzMDYzNjEy.X8KzVw.WkWjqzvARYTobB_vXeYVNlLxTXQ');
+client.login(process.env.token);
+//client.login('NzgyMzQyNjE5NjIzMDYzNjEy.X8KzVw.WkWjqzvARYTobB_vXeYVNlLxTXQ');
 client.on('ready',readykaka);
 client.on('message', gotMessage)
 
