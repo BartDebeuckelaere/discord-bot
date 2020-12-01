@@ -56,7 +56,7 @@ function gotMessage(msg){
         
         var random = Math.floor( Math.random() * zinnen.length);
         var zin = zinnen[random]
-        const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'daveyisgay');
+        const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'daveyisgey');
         msg.react(reactionEmoji);
         if(zin === "spongebob"){
             var spongebob = msg.content;
