@@ -4,6 +4,7 @@ const fetch = require('node-fetch');
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
+
 client.login(process.env.token);
 client.on('ready',readykaka);
 client.on('message', gotMessage)
@@ -136,6 +137,9 @@ function gotMessage(msg){
     if(msg.content === "bot regine"){
         msg.channel.send({files: ["regine.png"]})
 
+    }
+    if(msg.content.includes("ik") && msg.content.includes("ga") && msg.content.includes("eten")){
+        msg.channel.send("Laat het je smaken " + msg.author.username);
     }
         
 }
