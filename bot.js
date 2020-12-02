@@ -4,7 +4,6 @@ const fetch = require('node-fetch');
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
 client.login(process.env.token);
 client.on('ready',readykaka);
 client.on('message', gotMessage)
@@ -158,7 +157,8 @@ function joinChannel(oldMember, newMember){
         console.log("WELKOM IN BLOKSQUARE");
 
         const channel = client.channels.cache.find(channel => channel.id === "700386092595282103")
-        channel.send("Welkom in bloksquare " + newMember.member.user.username + " Goed studeren eh en onthou:");
+        channel.send("Welkom in bloksquare <@" + newMember.member.user.id + "> Goed studeren eh en onthou:");
+        // channel.send("Welkom in bloksquare " + newMember.member.user.username + " Goed studeren eh en onthou:");
         fetch("https://type.fit/api/quotes")
             .then(function(response) {
                 return response.json();
