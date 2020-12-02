@@ -165,7 +165,7 @@ function joinChannel(oldMember, newMember){
             })
             .then(function(data) {
                 var length = data.length
-                var random = Math.floor( Math.random() * zinnen.length);
+                var random = Math.floor( Math.random() * length);
        
                var tekstje =  data[random].text + " ~ " + data[random].author;
                channel.send(tekstje);
