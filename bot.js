@@ -4,9 +4,9 @@ const readline = require('readline');
 fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
-// client.login(process.env.token);
+client.login(process.env.token);
 
-client.login("NzgyMzQyNjE5NjIzMDYzNjEy.X8KzVw.vptq3o1kNfFr_p-SlroWSTJv8ew");
+// client.login("NzgyMzQyNjE5NjIzMDYzNjEy.X8KzVw.vptq3o1kNfFr_p-SlroWSTJv8ew");
 
 client.on('ready',readykaka);
 client.on('message', gotMessage)
