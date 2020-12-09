@@ -1,10 +1,13 @@
-
-
 const fetch = require('node-fetch');
+const readline = require('readline');
 
+fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
-client.login(process.env.token);
+// client.login(process.env.token);
+
+client.login("NzgyMzQyNjE5NjIzMDYzNjEy.X8KzVw.vptq3o1kNfFr_p-SlroWSTJv8ew");
+
 client.on('ready',readykaka);
 client.on('message', gotMessage)
 
@@ -47,16 +50,27 @@ function gotMessage(msg){
    //Davey id 701112008413806654
    
    //het mijne 512340561215356928
-
-
+    if(msg.channel.id == "780357807009693746"){
+        console.log("kakapipi");
+        if(msg.content.includes("bot insertquote")){
+           var quote =  msg.content.split(':')[1] + " - " + msg.author.username;
+           msg.channel.send( quote +" ingesteld wi matje");
+           fs.appendFile('QuotesPhaedra.txt',quote, function (err) {
+            if (err) throw err;
+            console.log('Saved!');
+          });
+        }
+    }
  
     if(701112008413806654 == msg.author.id){
         
         
         var random = Math.floor( Math.random() * zinnen.length);
         var zin = zinnen[random]
+
         const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'daveyisgey');
         msg.react(reactionEmoji);
+
         if(zin === "spongebob"){
             var spongebob = msg.content;
             var returnstring = " ";
@@ -114,11 +128,13 @@ function gotMessage(msg){
        
     }
     if(msg.content === "bot weetje"){
+
         fetch('https://uselessfacts.jsph.pl/random.json?language=en', {method: 'GET'})
         .then(res => res.json())
         .then(weetje => {
             msg.channel.send(weetje.text);
         }).catch(err => console.log(err));
+
     }
     if(msg.content === "bot klucht"){
         msg.channel.send("lars zijn presentatie straks omdat hij nu bezig is geweest met die stomme bot ier");
@@ -137,20 +153,19 @@ function gotMessage(msg){
         msg.channel.send({files: ["regine.png"]})
 
     }
-    if(msg.content.includes("ik") && msg.content.includes("ga") && msg.content.includes("eten")){
+    if( (msg.content.includes("ik") || msg.content.includes("Ik") ) && msg.content.includes("ga") && msg.content.includes("eten")){
         msg.channel.send("Laat het je smaken " + msg.author.username);
     }
         
 }
-// console.log(msg.member);
-// console.log(msg.content);
+
 
 function joinChannel(oldMember, newMember){
     let newUserChannel = newMember.channelID;
     let oldUserChannel = oldMember.channelID;
  
    
-    if(newUserChannel === "773487938217443338" && oldMember.channelID === null ) //don't remove ""
+    if(newUserChannel === "773487938217443338" && oldMember.channelID === null ) 
     { 
         
         
@@ -177,23 +192,42 @@ function joinChannel(oldMember, newMember){
     if(newUserChannel === "780193295233187850" && oldMember.channelID === null ) //don't remove ""
     { 
         
+
         
         console.log("WELKOM IN BLOKSQUARE");
 
-        const channel = client.channels.cache.find(channel => channel.id === "780357807009693746")
-        channel.send("Welkom in bloksquare <@" + newMember.member.user.id + "> Goed studeren eh en onthou:");
-        // channel.send("Welkom in bloksquare " + newMember.member.user.username + " Goed studeren eh en onthou:");
-        fetch("https://type.fit/api/quotes")
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                var length = data.length
-                var random = Math.floor( Math.random() * length);
-       
-               var tekstje =  data[random].text + " ~ " + data[random].author;
-               channel.send(tekstje);
-            });
+        if(Math.random() < 0.50){
+
+            const channel = client.channels.cache.find(channel => channel.id === "780357807009693746")
+            channel.send("Welkom in de studeerkamer <@" + newMember.member.user.id + "> Goed studeren eh en onthou:");
+            // channel.send("Welkom in bloksquare " + newMember.member.user.username + " Goed studeren eh en onthou:");
+            fetch("https://type.fit/api/quotes")
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    var length = data.length
+                    var random = Math.floor( Math.random() * length);
+           
+                   var tekstje =  data[random].text + " ~ " + data[random].author;
+                   channel.send(tekstje);
+                });
+        }
+        else{
+            const channel = client.channels.cache.find(channel => channel.id === "780357807009693746")
+            channel.send("Welkom in studeerkamer <@" + newMember.member.user.id + "> Goed studeren eh en onthou:");
+            
+            fs.readFile('QuotesPhaedra.txt', 'utf8', function (err,data) {
+                if (err) {
+                  return console.log(err);
+                }
+                var mydata = data.split("\n"[0]);
+                var random = Math.floor( Math.random() * mydata.length);
+                var tekstje = mydata[random];
+                channel.send(tekstje);
+              });
+        }
+
     }
     // else{
     //     // User leaves a voice channel
