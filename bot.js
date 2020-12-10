@@ -119,7 +119,7 @@ function gotMessage(msg){
         msg.channel.send(zin);
     }
     if(msg.content === "bot suggesties"){
-        msg.channel.send("suggesties mogen altijd doorgestuurd worden naar mijn ultieme maker Lars Doise");
+        msg.channel.send("suggesties mogen altijd doorgestuurd worden naar mijn ultieme maker Lars Doise of zijn trouwe dienaar en bot-assistent, Bart Debeuckelaere.");
     }
     if(msg.content === "bot dab"){
         msg.channel.send( {files: ["https://upload.wikimedia.org/wikipedia/commons/4/47/Do_the_Dab.jpg"]});
