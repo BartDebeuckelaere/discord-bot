@@ -19,15 +19,17 @@ function readykaka(){
 
 var zinnen = [
 
-"davey is gey",
+"Lindsay, Linday, Linday, ...",
 "spongebob",
-"stopt van janken",
-"je muzieksmaak trekt op niets",
-"davey is gey",
-"davey is gey",
-"hou je bek tjeuten",
+"Amai da's schoon gedaan. Heel weekend aan bezig geweest? Bonnekes binnen brengen he",
+"Ma allee Lindsay, waarom doe je gij dat nu?",
+"Allee ze is weer aan t smossen he!",
+"Hier se zelfs da kan ze nie",
+"Wij kunnen u niet serieus nemen omdat wij aliens zijn van de planeet Zork Mwuhahahahaha. Allee t is goed, werk ma verder",
+"En je hebt een mail, van jennen hond!"
 "jemoeder"
-
+"De persoon die we serieus nemen wordt gekenmerkt met een roze hoed en gele strik en deze week is dat Linday Deroo! Proficiat Linday!"
+"Hoh dat is enkel lachen jegens he"
 ]
 var randomZinnen = [
 
@@ -61,7 +63,7 @@ function gotMessage(msg){
         }
     }
  
-    if(701112008413806654 == msg.author.id){
+    if(428617205572304906 == msg.author.id){
         
         
         var random = Math.floor( Math.random() * zinnen.length);
@@ -106,7 +108,7 @@ function gotMessage(msg){
     if(msg.content === "bot help"){
         msg.channel.send("dit is wat je allemaal kan doen: bot <Commando>");
         msg.channel.send("commandos: zever | random | suggesties | dab | weetje | klucht | betere_klucht | beste klucht | regine");
-        msg.channel.send("De bot pest ook davy automatisch cool eh");
+        msg.channel.send("De bot pest ook Lindsay automatisch cool eh");
         msg.channel.send("Mijn profielfoto is een bot");
 
         
