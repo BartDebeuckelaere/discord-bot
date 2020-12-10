@@ -31,6 +31,23 @@ var zinnen = [
 "De persoon die we serieus nemen wordt gekenmerkt met een roze hoed en gele strik en deze week is dat Linday Deroo! Proficiat Linday!"
 "Hoh dat is enkel lachen jegens he"
 ]
+
+var tuurzinnen = [
+    "Lindsay vroeg om jou te pesten. Grof he?",
+    "Thierry, Thierry, Thierry, ...",
+    "We all lov u, Tuur",
+    "Wnr Avalon?",
+    "Mag k het nr van uw zus, Tuur?",
+    "Hoe is t met uw zus, Tuur?",
+    "Doet de groetjes aan uw zus he Tuur",
+    "Ej Tuur, is dat ondertussen al af tussen uw zus en die loser?",
+    "You are awarded the presidential medal of honor for your contribution in \"Operatie Dubbeldooier\"",
+    "Allee Tuur altublieft he zeg... Aspi's zijn echt wel te jong. VIEZERIK!",
+    "Zou je nie beter stoppen met studeren en full-time Hello Fresh doen?",
+    "We zijn blij dat je er bent, Tuur. We houden van je zoals jij bent.",
+    "Dit gepest was Phaedra haar idee... sorry Tuur"
+]
+
 var randomZinnen = [
 
     "davey is gey",
@@ -63,6 +80,28 @@ function gotMessage(msg){
         }
     }
  
+    if(771814964632748134 == msg.author.id){
+        
+        
+        var random = Math.floor( Math.random() * tuurzinnen.length);
+        var zin = tuurzinnen[random]
+
+        const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'daveyisgey');
+        msg.react(reactionEmoji);
+
+        if(zin === "jemoeder"){
+            
+            var woorden = msg.content.split(" ");
+            var longest = woorden.reduce(
+                function (a, b) {
+                    return a.length > b.length ? a : b;
+                })
+                msg.channel.send("je moeder is een " + longest);
+        }
+        else{
+            msg.channel.send(zin);  
+        }
+    }
     if(428617205572304906 == msg.author.id){
         
         
