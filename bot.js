@@ -118,11 +118,11 @@ function gotMessage(msg){
     if(msg.content === "bot zever"){
         msg.channel.send("ik ben een bot gemaakt door de oppermachtige Lars Doise en zijn assistent Bart Debeuckelaere");
     }
-    if(msg.content === "bot help"){
-        msg.channel.send("dit is wat je allemaal kan doen: bot <Commando>");
-        msg.channel.send("commandos: zever | random | suggesties | dab | weetje | klucht | betere_klucht | beste klucht | regine");
-        msg.channel.send("De bot pest ook davy automatisch cool eh");
-        msg.channel.send("Mijn profielfoto is een bot");
+    //if(msg.content === "bot help"){
+        //msg.channel.send("dit is wat je allemaal kan doen: bot <Commando>");
+        //msg.channel.send("commandos: zever | random | suggesties | dab | weetje | klucht | betere_klucht | beste klucht | regine");
+        //msg.channel.send("De bot pest ook davy automatisch cool eh");
+        //msg.channel.send("Mijn profielfoto is een bot");
 
         
     }
