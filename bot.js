@@ -17,18 +17,37 @@ function readykaka(){
     client.user.setActivity("typ bot")
 }
 
-var zinnen = [
-
-"davey is gey",
-"spongebob",
-"stopt van janken",
-"je muzieksmaak trekt op niets",
-"davey is gey",
-"davey is gey",
-"hou je bek tjeuten",
-"jemoeder"
-
+var lindsayzinnen = [
+    "Lindsay, Lindsay, Lindsay,...",
+    "Wij kunnen jou niet serieus nemen omdat wij aliens zijn van de planeet Zork mwuhahaha. Allee werk ma wa verder.",
+    "Ge hebt een mail... van jen hond!",
+    "Ma allee waarom doe je dat nu?",
+    "Lang aan bezig geweest? Bonnekes binnenbrengen he.",
+    "Mo en zelfs da kan ze nie.",
+    "Kalle",
+    "De persoon die we serieus nemen wordt herkend aan de gele strik en roze hoed en deze week is dat Lindsay Deroo! Proficiat Lindsay!"
 ]
+
+var tuurzinnen = [
+    "T was Phaedra's idee om jou te pesten, sorry Tuur...",
+    "Thierry, Thierry, Thierry,...",
+    "We all lov u Tuur",
+    "Wnr Avalon?",
+    "Mag k het nr van uw zus?",
+    "Hoe is t met uw zus, Tuur?",
+    "Doet de groetjes aan uw zus he Tuur",
+    "Ej Tuur, is dat ondertussen al af tussen uw zus en diene loser?",
+    "You are awarded the presidential medal of honor for you contribution in Operatie Dubbeldooier",
+    "Allee Tuur altublieft he zeg... Aspis zijn echt wel te jong. VIEZERIK!",
+    "Onnozeleir...",
+    "Weete nog Tuur? Van die keer met Maikal Jakson?",
+    "Da was een vre avond he. Met die tjoepen en die nappen en expirimenteren...",
+    "zou je nie beter stoppen met studeren en full-time Hello-Fresh doen?",
+    "We zijn blij dat je er bent, Tuur. We houden van je zoals jij bent.",
+    "Sorry Tuur... Ik moest jou pesten van Phaedra (grof he?!)",
+    "jemoeder"
+]
+
 var randomZinnen = [
 
     "davey is gey",
@@ -59,6 +78,13 @@ function gotMessage(msg){
             console.log('Saved!');
           });
         }
+    }
+    
+    // phaedra pesten
+    if(428617205572304906 == msg.author.id){
+        var random = Math.floor( Math.random() * lindsayzinnen.length);
+        var zin = lindsayzinnen[random]
+        msg.channel.send(zin);
     }
  
     if(701112008413806654 == msg.author.id){
