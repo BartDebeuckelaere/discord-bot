@@ -25,7 +25,7 @@ var lindsayzinnen = [
     "Lang aan bezig geweest? Bonnekes binnenbrengen he.",
     "Mo en zelfs da kan ze nie.",
     "Kalle",
-    "De persoon die we serieus nemen wordt herkend aan de gele strik en roze hoed en deze week is dat Linday Deroo! Proficiat Linday!
+    "De persoon die we serieus nemen wordt herkend aan de gele strik en roze hoed en deze week is dat Linday Deroo! Proficiat Linday!"
 ]
 var randomZinnen = [
 
