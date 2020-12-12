@@ -68,7 +68,7 @@ function gotMessage(msg){
    //Davey id 701112008413806654
    
    // studeerkamer id
-    if(msg.channel.id == "780357807009693746"){
+   if(msg.channel.id == "780357807009693746"){
         console.log("kakapipi");
         if(msg.content.includes("bot insertquote")){
            var quote =  msg.content.split(':')[1] + " - " + msg.author.username;
@@ -80,15 +80,7 @@ function gotMessage(msg){
         }
     }
     
-    if (782342619623063612 == msg.author.id){
-        msg.channel.send("What the fuck is this other bot doing here?")
-        msg.channel.send("I'm the best bot!")
-        msg.channel.send("Phaedra get this other bot offline!")
-        msg.channel.send("I won the bot election! The election is rigged!")
-        msg.channel.send("I'm the best!!!")
-        msg.channel.send("I heard Bart is pretty cool too...")
-    }
-    
+    // tuur pesten
     if (771814964632748134 == msg.author.id){
         var random = Math.floor( Math.random() * tuurzinnen.length);
         var zin = tuurzinnen[random]
@@ -107,6 +99,7 @@ function gotMessage(msg){
         }
     }
  
+    // phaedra pesten
     if(428617205572304906 == msg.author.id){
         
         
