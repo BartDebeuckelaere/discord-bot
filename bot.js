@@ -18,15 +18,14 @@ function readykaka(){
 }
 
 var lindsayzinnen = [
-    "Linday, Linday, Linday,..."
-    "Wij kunnen jou niet serieus nemen omdat wij aliens zijn van de planeet Zork mwuhahaha. Allee werk ma wa verder."
-    "Ge hebt een mail... van jen hond!"
-    "Ma allee waarom doe je dat nu?"
-    "Lang aan bezig geweest? Bonnekes binnenbrengen he."
-    "Mo en zelfs da kan ze nie."
-    "Kalle"
+    "Linday, Linday, Linday,...",
+    "Wij kunnen jou niet serieus nemen omdat wij aliens zijn van de planeet Zork mwuhahaha. Allee werk ma wa verder.",
+    "Ge hebt een mail... van jen hond!",
+    "Ma allee waarom doe je dat nu?",
+    "Lang aan bezig geweest? Bonnekes binnenbrengen he.",
+    "Mo en zelfs da kan ze nie.",
+    "Kalle",
     "De persoon die we serieus nemen wordt herkend aan de gele strik en roze hoed en deze week is dat Linday Deroo! Proficiat Linday!
-
 ]
 var randomZinnen = [
 
