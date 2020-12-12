@@ -48,7 +48,7 @@ var randomZinnen = [
 function gotMessage(msg){
    //Davey id 701112008413806654
    
-   //het mijne 512340561215356928
+   // studeerkamer id
     if(msg.channel.id == "780357807009693746"){
         console.log("kakapipi");
         if(msg.content.includes("bot insertquote")){
@@ -110,7 +110,7 @@ function gotMessage(msg){
     }
 
     if(msg.content === "bot zever"){
-        msg.channel.send("ik ben een bot gemaakt door de oppermachtige lars doise");
+        msg.channel.send("ik ben een bot gemaakt door de oppermachtige Lars Doise en zijn assistent Bart Debeuckelaere");
     }
     if(msg.content === "bot help"){
         msg.channel.send("dit is wat je allemaal kan doen: bot <Commando>");
