@@ -205,43 +205,18 @@ function joinChannel(oldMember, newMember){
     //PHAEDRAS GROEP
     if(newUserChannel === "780193295233187850" && oldMember.channelID === null ) //don't remove ""
     { 
-        
-
-        
         console.log("WELKOM IN BLOKSQUARE");
-
-        if(Math.random() < 0.50){
-
-            const channel = client.channels.cache.find(channel => channel.id === "780357807009693746")
-            channel.send("Welkom in de studeerkamer <@" + newMember.member.user.id + "> Goed studeren eh en onthou:");
-            // channel.send("Welkom in bloksquare " + newMember.member.user.username + " Goed studeren eh en onthou:");
-            fetch("https://type.fit/api/quotes")
-                .then(function(response) {
-                    return response.json();
-                })
-                .then(function(data) {
-                    var length = data.length
-                    var random = Math.floor( Math.random() * length);
-           
-                   var tekstje =  data[random].text + " ~ " + data[random].author;
-                   channel.send(tekstje);
-                });
-        }
-        else{
-            const channel = client.channels.cache.find(channel => channel.id === "780357807009693746")
-            channel.send("Welkom in studeerkamer <@" + newMember.member.user.id + "> Goed studeren eh en onthou:");
+        const channel = client.channels.cache.find(channel => channel.id === "780357807009693746")
+        channel.send("Welkom in studeerkamer <@" + newMember.member.user.id + "> Goed studeren eh en onthou:");
             
-            fs.readFile('QuotesPhaedra.txt', 'utf8', function (err,data) {
-                if (err) {
-                  return console.log(err);
-                }
-                var mydata = data.split("\n"[0]);
-                var random = Math.floor( Math.random() * mydata.length);
-                var tekstje = mydata[random];
-                channel.send(tekstje);
-              });
-        }
-
+        fs.readFile('QuotesPhaedra.txt', 'utf8', function (err,data) {
+            if (err) {
+                return console.log(err);
+            }
+        var mydata = data.split("\n"[0]);
+        var random = Math.floor( Math.random() * mydata.length);
+        var tekstje = mydata[random];
+        channel.send(tekstje);
     }
     // else{
     //     // User leaves a voice channel
