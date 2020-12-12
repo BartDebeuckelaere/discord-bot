@@ -25,6 +25,7 @@ var lindsayzinnen = [
     "Lang aan bezig geweest? Bonnekes binnenbrengen he.",
     "Mo en zelfs da kan ze nie.",
     "Kalle",
+    "Olla eerst toeter gebruiken he",
     "De persoon die we serieus nemen wordt herkend aan de gele strik en roze hoed en deze week is dat Lindsay Deroo! Proficiat Lindsay!"
 ]
 
