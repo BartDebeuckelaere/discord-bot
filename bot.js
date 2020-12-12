@@ -49,7 +49,6 @@ var tuurzinnen = [
 ]
     
 var randomZinnen = [
-
     "davey is gey",
     "kakapipi",
     "je zou beter leren dan spelen met deze domme bot",
@@ -57,18 +56,14 @@ var randomZinnen = [
     "hoe gaat het met je?",
     "bliep bloep",
     "ik ben gemaakt om de mensheid over te nemen"
-
-
-
-
 ]
 
 
 function gotMessage(msg){
-   //Davey id 701112008413806654
-   
-   // studeerkamer id
-   if(msg.channel.id == "780357807009693746"){
+    
+    //Davey id 701112008413806654
+    // studeerkamer id 780357807009693746
+    if(msg.channel.id == "780357807009693746"){
         console.log("kakapipi");
         if(msg.content.includes("bot insertquote")){
            var quote =  msg.content.split(':')[1] + " - " + msg.author.username;
@@ -81,23 +76,23 @@ function gotMessage(msg){
     }
     
     // tuur pesten
-    if (771814964632748134 == msg.author.id){
-        var random = Math.floor( Math.random() * tuurzinnen.length);
-        var zin = tuurzinnen[random]
+//    if (771814964632748134 == msg.author.id){
+//        var random = Math.floor( Math.random() * tuurzinnen.length);
+//        var zin = tuurzinnen[random]
 
-        if(zin === "jemoeder"){
+//        if(zin === "jemoeder"){
             
-            var woorden = msg.content.split(" ");
-            var longest = woorden.reduce(
-                function (a, b) {
-                    return a.length > b.length ? a : b;
-                })
-                msg.channel.send("je moeder is een " + longest);
-        }
-        else{
-            msg.channel.send(zin);  
-        }
-    }
+//            var woorden = msg.content.split(" ");
+//            var longest = woorden.reduce(
+//                function (a, b) {
+//                    return a.length > b.length ? a : b;
+//                })
+//                msg.channel.send("je moeder is een " + longest);
+//        }
+//        else{
+//            msg.channel.send(zin);  
+//        }
+//    }
  
     // phaedra pesten
     if(428617205572304906 == msg.author.id){
