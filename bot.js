@@ -60,6 +60,15 @@ function gotMessage(msg){
           });
         }
     }
+    
+    if (782342619623063612 == msg.author.id){
+        msg.channel.send("What the fuck is this other bot doing here?")
+        msg.channel.send("I'm the best bot!")
+        msg.channel.send("Somebody get this other bot offline!")
+        msg.channel.send("I won the bot election! The election is rigged!")
+        msg.channel.send("I'm the best!!!")
+        msg.channel.send("I heard  <@" + newMember.622422566081921054 + "> is pretty cool too...")
+    }
  
     if(701112008413806654 == msg.author.id){
         
