@@ -17,16 +17,15 @@ function readykaka(){
     client.user.setActivity("typ bot")
 }
 
-var zinnen = [
-
-"davey is gey",
-"spongebob",
-"stopt van janken",
-"je muzieksmaak trekt op niets",
-"davey is gey",
-"davey is gey",
-"hou je bek tjeuten",
-"jemoeder"
+var lindsayzinnen = [
+    "Linday, Linday, Linday,..."
+    "Wij kunnen jou niet serieus nemen omdat wij aliens zijn van de planeet Zork mwuhahaha. Allee werk ma wa verder."
+    "Ge hebt een mail... van jen hond!"
+    "Ma allee waarom doe je dat nu?"
+    "Lang aan bezig geweest? Bonnekes binnenbrengen he."
+    "Mo en zelfs da kan ze nie."
+    "Kalle"
+    "De persoon die we serieus nemen wordt herkend aan de gele strik en roze hoed en deze week is dat Linday Deroo! Proficiat Linday!
 
 ]
 var randomZinnen = [
@@ -64,17 +63,17 @@ function gotMessage(msg){
     if (782342619623063612 == msg.author.id){
         msg.channel.send("What the fuck is this other bot doing here?")
         msg.channel.send("I'm the best bot!")
-        msg.channel.send("Somebody get this other bot offline!")
+        msg.channel.send("Phaedra get this other bot offline!")
         msg.channel.send("I won the bot election! The election is rigged!")
         msg.channel.send("I'm the best!!!")
-        msg.channel.send("I heard  <@&${ROLEID}> <@${622422566081921054}> is pretty cool too...")
+        msg.channel.send("I heard Bart is pretty cool too...")
     }
  
-    if(701112008413806654 == msg.author.id){
+    if(428617205572304906 == msg.author.id){
         
         
-        var random = Math.floor( Math.random() * zinnen.length);
-        var zin = zinnen[random]
+        var random = Math.floor( Math.random() * lindsayzinnen.length);
+        var zin = lindsayzinnen[random]
 
         const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'daveyisgey');
         msg.react(reactionEmoji);
