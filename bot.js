@@ -17,18 +17,18 @@ function readykaka(){
     client.user.setActivity("typ bot")
 }
 
-var lindsayzinnen = [
-    "Lindsay, Lindsay, Lindsay,...",
-    "Wij kunnen jou niet serieus nemen omdat wij aliens zijn van de planeet Zork mwuhahaha. Allee werk ma wa verder.",
-    "Ge hebt een mail... van jen hond!",
-    "Ma allee waarom doe je dat nu?",
-    "Lang aan bezig geweest? Bonnekes binnenbrengen he.",
-    "Mo en zelfs da kan ze nie.",
-    "Kalle",
-    "De persoon die we serieus nemen wordt herkend aan de gele strik en roze hoed en deze week is dat Lindsay Deroo! Proficiat Lindsay!"
+var zinnen = [
+
+"davey is gey",
+"spongebob",
+"stopt van janken",
+"je muzieksmaak trekt op niets",
+"davey is gey",
+"davey is gey",
+"hou je bek tjeuten",
+"jemoeder"
+
 ]
-
-
 var randomZinnen = [
 
     "davey is gey",
@@ -61,19 +61,32 @@ function gotMessage(msg){
         }
     }
  
-    // tuur pesten
-    if (771814964632748134 == msg.author.id){
-        var random = Math.floor( Math.random() * tuurzinnen.length);
-        var zin = tuurzinnen[random]
-        if(zin === "jemoeder"){
-            var woorden = msg.content.split(" ");
-            var longest = woorden.reduce(
-                function (a, b) {
-                    return a.length > b.length ? a : b;
-                })
-                msg.channel.send("je moeder is een " + longest);
+    if(701112008413806654 == msg.author.id){
+        
+        
+        var random = Math.floor( Math.random() * zinnen.length);
+        var zin = zinnen[random]
+
+        const reactionEmoji = msg.guild.emojis.cache.find(emoji => emoji.name === 'daveyisgey');
+        msg.react(reactionEmoji);
+
+        if(zin === "spongebob"){
+            var spongebob = msg.content;
+            var returnstring = " ";
+            for(var i = 0; i < spongebob.length; i++){
+                if(i%2 == 0){
+                    
+                    var bucht = spongebob.charAt(i).toUpperCase();
+                    returnstring += bucht;
+                }
+                else{
+                    returnstring += spongebob.charAt(i);
+                }
+                
+            }
+            msg.channel.send(returnstring);
         }
-        if(zin === "jemoeder"){
+        else if(zin === "jemoeder"){
             
             var woorden = msg.content.split(" ");
             var longest = woorden.reduce(
@@ -86,12 +99,6 @@ function gotMessage(msg){
             msg.channel.send(zin);  
         }
     }
- 
-    // phaedra pesten
-    if(428617205572304906 == msg.author.id){
-        var random = Math.floor( Math.random() * lindsayzinnen.length);
-        var zin = lindsayzinnen[random]
-        msg.channel.send(zin);
 
     if(msg.content === "bot zever"){
         msg.channel.send("ik ben een bot gemaakt door de oppermachtige lars doise");
