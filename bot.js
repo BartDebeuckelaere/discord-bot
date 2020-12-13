@@ -138,38 +138,32 @@ function gotMessage(msg){
     
     // tuur pesten
     if (771814964632748134 == msg.author.id){
-        var random = Math.floor( Math.random() * tuurzinnen.length);
-        var zin = tuurzinnen[random]
-        if(zin === "jemoeder"){
-            var woorden = msg.content.split(" ");
-            var longest = woorden.reduce(
-                function (a, b) {
-                    return a.length > b.length ? a : b;
-                })
-                msg.channel.send("je moeder is een " + longest);
-        }
-        if(zin === "jemoeder"){
-            
-            var woorden = msg.content.split(" ");
-            var longest = woorden.reduce(
-                function (a, b) {
-                    return a.length > b.length ? a : b;
-                })
-                msg.channel.send("je moeder is een " + longest);
-        }
-        else{
-            msg.channel.send(zin);  
+        if (Math.random()<0.5){
+            var random = Math.floor( Math.random() * tuurzinnen.length);
+            var zin = tuurzinnen[random]
+            if(zin === "jemoeder"){
+
+                var woorden = msg.content.split(" ");
+                var longest = woorden.reduce(
+                    function (a, b) {
+                        return a.length > b.length ? a : b;
+                    })
+                    msg.channel.send("je moeder is een " + longest);
+            }
+            else{
+                msg.channel.send(zin);  
+            }
         }
     }
     
-//    if (msg.author.id ==622422566081921054) {
-//        if (msg.content.includes("essiah")){
-//            msg.channel.send("HE IS THE MESSIAH!")
-//        }
-//        else{
-//            msg.channel.send("Heiiil Messiah!")
-//        }
-//    }
+    if (msg.author.id ==622422566081921054) {
+        if (msg.content.includes("essiah")){
+            msg.channel.send("HE IS THE MESSIAH!")
+        }
+        else if (Math.random<0.05){
+            msg.channel.send("Heiiil Messiah!")
+        }
+    }
         
     if(msg.content === "bot zever"){
         msg.channel.send("ik ben een bot gemaakt door de oppermachtige Lars Doise en zijn assistent Bart Debeuckelaere");
