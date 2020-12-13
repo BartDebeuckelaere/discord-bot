@@ -109,7 +109,7 @@ function gotMessage(msg){
     
     // phaedra pesten
     if(428617205572304906 == msg.author.id){
-        f(Math.random() < 0.5){
+        if(Math.random() < 0.5){
             var random = Math.floor( Math.random() * lindsayzinnen.length);
             var zin = lindsayzinnen[random]
             msg.channel.send(zin);
