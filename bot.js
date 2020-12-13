@@ -156,19 +156,19 @@ function gotMessage(msg){
     }
     if(msg.content === "bot help"){
         msg.channel.send("dit is wat je allemaal kan doen: bot <Commando>");
-        msg.channel.send("commandos: zever | random | suggesties | dab | weetje | klucht | betere_klucht | beste klucht | regine");
-        msg.channel.send("Ik bot lacht ook jegens Phaedra hehe (en Tuur ma da moest van Phaedra...)");
-        msg.channel.send("Mijn profielfoto is een bot");
+        msg.channel.send("commandos: zever | random | suggesties | dab | weetje | klucht | betere_klucht | beste klucht");
+        msg.channel.send("Ik lach ook jegens Phaedra hehe (en Tuur ma da moest van Phaedra...)");
+        msg.channel.send("Mijn profielfoto is de prombadge van mijn all time favoriete prom");
 
         
     }
     if(msg.content === "bot random"){
-        var random = Math.floor( Math.random() * zinnen.length);
+        var random = Math.floor( Math.random() * randomZinnen.length);
         var zin = randomZinnen[random]
         msg.channel.send(zin);
     }
     if(msg.content === "bot suggesties"){
-        msg.channel.send("suggesties mogen altijd doorgestuurd worden naar mijn ultieme maker Lars Doise");
+        msg.channel.send("suggesties mogen altijd doorgestuurd worden naar Bart Debeuckelaere");
     }
     if(msg.content === "bot dab"){
         msg.channel.send( {files: ["https://upload.wikimedia.org/wikipedia/commons/4/47/Do_the_Dab.jpg"]});
@@ -199,10 +199,9 @@ function gotMessage(msg){
                 msg.channel.send(mop.attachments[0].text);
         }).catch(err => console.log(err));
     }
-    if(msg.content === "bot regine"){
-        msg.channel.send({files: ["regine.png"]})
-
-    }
+//    if(msg.content === "bot regine"){
+//        msg.channel.send({files: ["regine.png"]})
+//    }
     if(msg.content.includes("pauze") || msg.content.includes("Pauze")){
         var random = Math.floor( Math.random() * pauzezinnen.length);
         var zin = pauzezinnen[random]
