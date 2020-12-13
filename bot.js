@@ -63,12 +63,22 @@ var pauzezinnen = [
     "Ja, en blijf maar weg!"
     
 ]
+
+var battzinnen = [
+    "Ha loser! ",
+    "Koop es een deftige gsm ",
+    "Ja laad hem dan op he ",
+    "Zeg ma gewoon dat je ons niet moet hebben he ",
+    "Pls come back tho "
     
+]    
 
 var randomZinnen = [
 
-    "davey is gey",
-    "kakapipi",
+    "Bart is leuk",
+    "Gaan we es op wandeldate?",
+    "LAAT ME GERUST!",
+    "Heyy, how you doiiin?",
     "je zou beter leren dan spelen met deze domme bot",
     "od je bek",
     "hoe gaat het met je?",
@@ -170,7 +180,7 @@ function gotMessage(msg){
         msg.channel.send("lars zijn presentatie straks omdat hij nu bezig is geweest met die stomme bot ier");
     }
     if(msg.content === "bot betere_klucht"){
-        msg.channel.send("odisee hogeschool");
+        msg.channel.send("Lindsay");
     }
     if(msg.content === "bot beste_klucht"){
         fetch('https://icanhazdadjoke.com/slack')
@@ -188,8 +198,16 @@ function gotMessage(msg){
         var zin = pauzezinnen[random]
         msg.channel.send(zin);
     }
+    if ((msg.content.includes("batterij")|| msg.content.includes("Batterij")||msg.content.includes("battery")|| msg.content.includes("Battery"))&&msg.content.includes("plat")){
+        var random = Math.floor( Math.random() * battzinnen.length);
+        var zin = battzinnen[random]
+        msg.channel.send(zin+ msg.author.username);
+    }
     if( (msg.content.includes("ik") || msg.content.includes("Ik") ) && msg.content.includes("ga") && msg.content.includes("eten")){
         msg.channel.send("Laat het je smaken " + msg.author.username);
+    }
+    if(msg.content.includes("slapen")||msg.content.includes("Slapen")||msg.content.includes("slaap")||msg.content.includes("Slaap")){
+        msg.channel.send("Slaapwel " + msg.author.username);
     }
         
 }
