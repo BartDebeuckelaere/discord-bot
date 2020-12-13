@@ -64,6 +64,15 @@ var pauzezinnen = [
     
 ]
 
+var dankzinnen = [
+    "Who are you?",
+    "Why is there another bot here?",
+    "Who let this one in?",
+    "I don't like you...",
+    "Nobody"
+]
+
+    
 var battzinnen = [
     "Ha loser! ",
     "Koop es een deftige gsm ",
@@ -104,6 +113,17 @@ function gotMessage(msg){
             if (err) throw err;
             console.log('Saved!');
           });
+        }
+    }
+    
+    if (270904126974590976 == msg.author.id){
+        var random = Math.floor( Math.random() * dankzinnen.length);
+        var zin = dankzinnen[random]
+        if (zin === "Nobody"){
+            msg.channel.send("Nobody thinks you're funny " + msg.author.username);
+        }
+        else{
+            msg.channel.sen(zin)
         }
     }
     
