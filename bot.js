@@ -232,11 +232,16 @@ function gotMessage(msg){
         var zin = battzinnen[random]
         msg.channel.send(zin+ msg.author.username);
     }
-    if( (msg.content.includes("ik") || msg.content.includes("Ik") ) && msg.content.includes("ga") && msg.content.includes("eten")){
+    if( (msg.content.includes("ik") || msg.content.includes("Ik") || msg.content.includes("k") || msg.content.includes("K")) && msg.content.includes("ga") && msg.content.includes("eten")){
         msg.channel.send("Laat het je smaken " + msg.author.username);
     }
     if(msg.content.includes("slapen")||msg.content.includes("Slapen")||msg.content.includes("slaap")||msg.content.includes("Slaap")){
         msg.channel.send("Slaapwel " + msg.author.username);
+    }
+    if (msg.content.includes("fack") || msg.content.includes("Fack") || msg.content.includes("FACK") || msg.content.includes("fuck")|| msg.content.includes("Fuck")
+       || msg.content.includes("FUCK")|| msg.content.includes("GVD")|| msg.content.includes("gvd")|| msg.content.includes("verdomme")|| msg.content.includes("Godverdomme")
+       || msg.content.includes("GODVERDOMME")|| msg.content.includes("Shit")|| msg.content.includes("SHIT")|| msg.content.includes("shit")){
+        msg.channel.send("Ola nie vloeken he "+ msg.author.username);
     }
         
 }
