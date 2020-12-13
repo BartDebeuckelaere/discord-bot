@@ -193,7 +193,7 @@ function gotMessage(msg){
         msg.channel.send({files: ["regine.png"]})
 
     }
-    if(msg.content.includes("pauze") || msg.conent.includes("Pauze")){
+    if(msg.content.includes("pauze") || msg.content.includes("Pauze")){
         var random = Math.floor( Math.random() * pauzezinnen.length);
         var zin = pauzezinnen[random]
         msg.channel.send(zin);
