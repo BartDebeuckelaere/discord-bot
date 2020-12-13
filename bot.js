@@ -109,9 +109,11 @@ function gotMessage(msg){
     
     // phaedra pesten
     if(428617205572304906 == msg.author.id){
-        var random = Math.floor( Math.random() * lindsayzinnen.length);
-        var zin = lindsayzinnen[random]
-        msg.channel.send(zin);
+        f(Math.random() < 0.5){
+            var random = Math.floor( Math.random() * lindsayzinnen.length);
+            var zin = lindsayzinnen[random]
+            msg.channel.send(zin);
+        }
     }
     
     // tuur pesten
@@ -139,15 +141,23 @@ function gotMessage(msg){
             msg.channel.send(zin);  
         }
     }
-
-
+    
+    if (msg.author.id ==622422566081921054) {
+        if (msg.content.includes("essiah")){
+            msg.channel.send("HE IS THE MESSIAH!")
+        }
+        else{
+            msg.channel.send("Heiiil Messiah!")
+        }
+    }
+        
     if(msg.content === "bot zever"){
-        msg.channel.send("ik ben een bot gemaakt door de oppermachtige lars doise");
+        msg.channel.send("ik ben een bot gemaakt door de oppermachtige Lars Doise en zijn assistent Bart Debeuckelaere");
     }
     if(msg.content === "bot help"){
         msg.channel.send("dit is wat je allemaal kan doen: bot <Commando>");
         msg.channel.send("commandos: zever | random | suggesties | dab | weetje | klucht | betere_klucht | beste klucht | regine");
-        msg.channel.send("De bot pest ook davy automatisch cool eh");
+        msg.channel.send("Ik bot lacht ook jegens Phaedra hehe (en Tuur ma da moest van Phaedra...)");
         msg.channel.send("Mijn profielfoto is een bot");
 
         
