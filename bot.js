@@ -142,14 +142,14 @@ function gotMessage(msg){
         }
     }
     
-    if (msg.author.id ==622422566081921054) {
-        if (msg.content.includes("essiah")){
-            msg.channel.send("HE IS THE MESSIAH!")
-        }
-        else{
-            msg.channel.send("Heiiil Messiah!")
-        }
-    }
+//    if (msg.author.id ==622422566081921054) {
+//        if (msg.content.includes("essiah")){
+//            msg.channel.send("HE IS THE MESSIAH!")
+//        }
+//        else{
+//            msg.channel.send("Heiiil Messiah!")
+//        }
+//    }
         
     if(msg.content === "bot zever"){
         msg.channel.send("ik ben een bot gemaakt door de oppermachtige Lars Doise en zijn assistent Bart Debeuckelaere");
