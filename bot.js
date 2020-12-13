@@ -49,6 +49,22 @@ var tuurzinnen = [
     "jemoeder"
 ]
 
+var pauzezinnen = [
+    "_play stay rihanna",
+    "_play I will wait",
+    "Tot sebiet",
+    "K zou t niet te lang maken als k jou was ;)",
+    "K ga je missen!",
+    "Geniet ervan",
+    "Royco soepje drinken he!",
+    "Ha... Alsof je t nodig hebt",
+    "Ik hou je stoel wel efkes warm",
+    "Weeral?!",
+    "Ja, en blijf maar weg!"
+    
+]
+    
+
 var randomZinnen = [
 
     "davey is gey",
@@ -166,6 +182,11 @@ function gotMessage(msg){
     if(msg.content === "bot regine"){
         msg.channel.send({files: ["regine.png"]})
 
+    }
+    if(msg.content.includes("pauze") || msg.conent.includes("Pauze")){
+        var random = Math.floor( Math.random() * pauzezinnen.length);
+        var zin = pauzezinnen[random]
+        msg.channel.send(zin);
     }
     if( (msg.content.includes("ik") || msg.content.includes("Ik") ) && msg.content.includes("ga") && msg.content.includes("eten")){
         msg.channel.send("Laat het je smaken " + msg.author.username);
