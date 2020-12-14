@@ -229,7 +229,7 @@ function gotMessage(msg){
     if( (msg.content.includes("ik") || msg.content.includes("Ik") || msg.content.includes("k") || msg.content.includes("K")) && msg.content.includes("ga") && msg.content.includes("eten")){
         msg.channel.send("Laat het je smaken " + msg.author.username);
     }
-    if(msg.content.includes("slapen")||msg.content.includes("Slapen")||msg.content.includes("slaap")||msg.content.includes("Slaap")||(msg.content.includes("toppen")&&msg.content.includes("vandaag")){
+    if(msg.content.includes("slapen")||msg.content.includes("Slapen")||msg.content.includes("slaap")||msg.content.includes("Slaap")||(msg.content.includes("toppen")&&msg.content.includes("vandaag"))){
         msg.channel.send("Slaapwel " + msg.author.username);
     }
     if (msg.content.includes("fack") || msg.content.includes("Fack") || msg.content.includes("FACK") || msg.content.includes("fuck")|| msg.content.includes("Fuck")
