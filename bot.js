@@ -37,7 +37,6 @@ var tuurzinnen = [
     "Mag k het nr van uw zus?",
     "Hoe is t met uw zus, Tuur?",
     "Doet de groetjes aan uw zus he Tuur",
-    "Ej Tuur, is dat ondertussen al af tussen uw zus en diene loser?",
     "You are awarded the presidential medal of honor for you contribution in Operatie Dubbeldooier",
     "Allee Tuur altublieft he zeg... Aspis zijn echt wel te jong. VIEZERIK!",
     "Onnozeleir...",
@@ -49,9 +48,8 @@ var tuurzinnen = [
     "jemoeder"
 ]
 
+// _play stay rihanna, _play I will wait
 var pauzezinnen = [
-    "_play stay rihanna",
-    "_play I will wait",
     "Tot sebiet",
     "K zou t niet te lang maken als k jou was ;)",
     "K ga je missen!",
@@ -65,11 +63,13 @@ var pauzezinnen = [
 ]
 
 var dankzinnen = [
-    "Who are you?",
+    "Who the f are you?",
     "Why is there another bot here?",
     "Who let this one in?",
     "I don't like you...",
-    "Nobody"
+    "Nobody",
+    "Puh...",
+    "ha. ha. ha."
 ]
 
     
