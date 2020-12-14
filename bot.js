@@ -117,7 +117,7 @@ function gotMessage(msg){
     if(msg.content === "bot klep toe"){
         zwijg = True
     }
-    if not zwijg{
+    if (zwijg === False){
         if(msg.channel.id == "780357807009693746"){
             console.log("kakapipi");
             if(msg.content.includes("bot insertquote")){
