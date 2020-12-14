@@ -110,14 +110,14 @@ var randomZinnen = [
 
 
 ]
-var zwijg = False
+var zwijg = false;
 
 
 function gotMessage(msg){
     if(msg.content === "bot klep toe"){
-        zwijg = True
+        zwijg = true
     }
-    if (zwijg === False){
+    if (zwijg === false){
         if(msg.channel.id == "780357807009693746"){
             console.log("kakapipi");
             if(msg.content.includes("bot insertquote")){
