@@ -232,7 +232,7 @@ function gotMessage(msg){
     //    if(msg.content === "bot regine"){
     //        msg.channel.send({files: ["regine.png"]})
     //    }
-        if (msg.author.id != 1){
+        if (msg.author.id != 786691288211783760){
             if(msg.content.includes("pauze") || msg.content.includes("Pauze") || msg.content.includes("10 min") || msg.content.includes("15 min") || msg.content.includes("break")){
                 var random = Math.floor( Math.random() * pauzezinnen.length);
                 var zin = pauzezinnen[random]
