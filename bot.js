@@ -15,8 +15,6 @@ client.on('voiceStateUpdate', joinChannel);
 function readykaka(){
     console.log('ik ben klaaaar');
     client.user.setActivity("typ bot")
-    msg.channel.send("Sorry voor de spam... Ik zal meer manieren hebben in de toekomst...");
-    msg.channel.send("Moest ik weer kut doen, kan je \"bot klep toe\" typen en dan zwijg ik...");
 }
 
 var lindsayzinnen = [
@@ -117,6 +115,19 @@ function gotMessage(msg){
     if(msg.content === "bot klep toe"){
         zwijg = true
     }
+    if(msg.content === "bot praat maar hoor"){
+        zwijg = false
+    }
+    if (270904126974590976 == msg.author.id){
+        var random = Math.floor( Math.random() * dankzinnen.length);
+        var zin = dankzinnen[random]
+        if (zin === "Nobody"){
+            msg.channel.send("Nobody thinks you're funny " + msg.author.username);
+        }
+        else{
+            msg.channel.sen(zin)
+        }
+    }
     if (zwijg === false){
         if(msg.channel.id == "780357807009693746"){
             console.log("kakapipi");
@@ -130,20 +141,11 @@ function gotMessage(msg){
             }
         }
 
-        if (270904126974590976 == msg.author.id){
-            var random = Math.floor( Math.random() * dankzinnen.length);
-            var zin = dankzinnen[random]
-            if (zin === "Nobody"){
-                msg.channel.send("Nobody thinks you're funny " + msg.author.username);
-            }
-            else{
-                msg.channel.sen(zin)
-            }
-        }
+        
 
         // phaedra pesten
         if(428617205572304906 == msg.author.id){
-            if(Math.random() < 0.5){
+            if(Math.random() < 0.3){
                 var random = Math.floor( Math.random() * lindsayzinnen.length);
                 var zin = lindsayzinnen[random]
                 msg.channel.send(zin);
@@ -152,7 +154,7 @@ function gotMessage(msg){
 
         // tuur pesten
         if (771814964632748134 == msg.author.id){
-            if (Math.random()<0.5){
+            if (Math.random()<0.3){
                 var random = Math.floor( Math.random() * tuurzinnen.length);
                 var zin = tuurzinnen[random]
                 if(zin === "jemoeder"){
