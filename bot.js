@@ -62,6 +62,16 @@ var pauzezinnen = [
     
 ]
 
+var sportzinnen = [
+    "Veel plezier!",
+    "Succes!",
+    "Geniet ervan!",
+    "Ik wil ook sporten maar ik ben een bot :'(",
+    "Pls come back tho",
+    "Ola sportief!"
+]
+
+
 var dankzinnen = [
     "Who the f are you?",
     "Why is there another bot here?",
@@ -224,6 +234,11 @@ function gotMessage(msg){
     if ((msg.content.includes("batterij")|| msg.content.includes("Batterij")||msg.content.includes("battery")|| msg.content.includes("Battery"))&&msg.content.includes("plat")){
         var random = Math.floor( Math.random() * battzinnen.length);
         var zin = battzinnen[random]
+        msg.channel.send(zin+ msg.author.username);
+    }
+    if (msg.content.includes("sport")|| msg.content.includes("Sport")||msg.content.includes("lopen")||msg.content.includes("Lopen")){
+        var random = Math.floor( Math.random() * sportzinnen.length);
+        var zin = sportzinnen[random]
         msg.channel.send(zin+ msg.author.username);
     }
     if( (msg.content.includes("ik") || msg.content.includes("Ik") || msg.content.includes("k") || msg.content.includes("K")) && msg.content.includes("ga") && msg.content.includes("eten")){
