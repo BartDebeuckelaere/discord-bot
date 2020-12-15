@@ -116,7 +116,7 @@ function gotMessage(msg){
         var zin = msg.content.slice(5);
         //console.log(client.channels);//.fetch(780357807009693746))
         //console.log(client.channels.fetch('780357807009693746'));
-        const chan = client.channels.fetch('780357807009693746')
+        //const chan = client.channels.fetch('780357807009693746')
         //console.log(chan)
         chan.send(zin)
     }
@@ -139,6 +139,7 @@ function gotMessage(msg){
     }
     if (zwijg === false){
         if(msg.channel.id == "780357807009693746"){
+            const chan = msg.channel
             console.log("kakapipi");
             if(msg.content.includes("bot insertquote")){
                var quote =  msg.content.split(':')[1] + " - " + msg.author.username;
