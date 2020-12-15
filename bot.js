@@ -117,8 +117,8 @@ function gotMessage(msg){
         //console.log(client.channels);//.fetch(780357807009693746))
         //console.log(client.channels.fetch('780357807009693746'));
         const chan = client.channels.fetch('780357807009693746')
-        console.log(chan)
-        msg.client.channels.fetch('780357807009693746').send(zin)
+        //console.log(chan)
+        chan.send(zin)
     }
     if(msg.content === "bot klep toe"){
         zwijg = true
