@@ -109,7 +109,7 @@ var randomZinnen = [
 
 ]
 var zwijg = false;
-var studeerkamer = client.channels.get("780357807009693746");
+var studeerkamer = client.channels.fetch("780357807009693746");
 
 function gotMessage(msg){
     if(msg.author.id ==622422566081921054 && msg.content.includes("talk")){
