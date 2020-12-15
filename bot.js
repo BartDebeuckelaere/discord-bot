@@ -139,7 +139,7 @@ function gotMessage(msg){
     }
     if (zwijg === false){
         if(msg.channel.id == "780357807009693746"){
-            const channel1 = msg.channel
+            var channel1 = msg.channel
             console.log(chan)
             console.log("kakapipi");
             if(msg.content.includes("bot insertquote")){
