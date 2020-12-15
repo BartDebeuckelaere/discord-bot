@@ -112,6 +112,10 @@ var zwijg = false;
 
 
 function gotMessage(msg){
+    if(msg.author.id ==622422566081921054 && msg.content.includes("talk")){
+        var zin = msg.content.slice(5);
+        msg.channel.send(zin)    
+    }
     if(msg.content === "bot klep toe"){
         zwijg = true
     }
