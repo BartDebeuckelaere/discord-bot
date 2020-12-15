@@ -118,7 +118,7 @@ function gotMessage(msg){
         //console.log(client.channels.fetch('780357807009693746'));
         //const chan = client.channels.fetch('780357807009693746')
         //console.log(chan)
-        chan.send(zin)
+        channel1.send(zin)
     }
     if(msg.content === "bot klep toe"){
         zwijg = true
@@ -139,7 +139,8 @@ function gotMessage(msg){
     }
     if (zwijg === false){
         if(msg.channel.id == "780357807009693746"){
-            const chan = msg.channel
+            const channel1 = msg.channel
+            console.log(chan)
             console.log("kakapipi");
             if(msg.content.includes("bot insertquote")){
                var quote =  msg.content.split(':')[1] + " - " + msg.author.username;
