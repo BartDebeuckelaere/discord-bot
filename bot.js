@@ -271,6 +271,9 @@ function gotMessage(msg){
                || msg.content.includes("GODVERDOMME")|| msg.content.includes("Shit")|| msg.content.includes("SHIT")|| msg.content.includes("shit")){
                 msg.channel.send("Ola nie vloeken he "+ msg.author.username);
             }
+            if (msg.content.includes("saapjen")){
+                msg.channel.send("IK BEN EEN BEEIR")
+            }
         }
     }
         
