@@ -61,11 +61,30 @@ var pauzezinnen = [
     //"Ja, en blijf maar weg!"
     "Je gaat er deugd van hebben",
     "And I will wait, I will wait for yoouuuuuu",
-    "https://tenor.com/view/despicable-me-agnes-please-dont-go-beg-the-look-gif-7543421"
+    "https://tenor.com/view/despicable-me-agnes-please-dont-go-beg-the-look-gif-7543421",
+    "https://tenor.com/view/talk-soon-talk-to-you-soon-later-leaving-bye-gif-11819904",
+    "https://tenor.com/view/penguin-hello-hi-hey-there-cutie-gif-17576187",
+    "https://tenor.com/view/see-ralph-thesimpsons-gif-4390318"
+    
+]
+
+var slaapzinnen = [
+    "Slaapwel!",
+    "https://tenor.com/view/yes-night-yawn-sleepy-gif-10578126",
+    "https://tenor.com/view/golden-retriever-p-js-blue-yawning-cute-gif-14489623",
+    "https://tenor.com/view/night-good-night-sleep-tired-collapse-gif-10609182",
+    "https://tenor.com/view/bear-blow-a-kiss-love-hearts-kissing-gif-15229339"
     
 ]
 
 var sportzinnen = [
+    "https://tenor.com/view/dance-hot-girl-dancing-smile-number1026-gif-15532061",
+    "https://tenor.com/view/i-am-athlete-strong-sports-sarcastic-gif-14768419",
+    "https://tenor.com/view/television-thesimpsons-gif-4713669",
+    "https://tenor.com/view/work-out-cartoon-fitness-staying-healthy-fit-gif-10681166",
+    "https://tenor.com/view/hamster-workout-gym-no-pain-no-gain-gym-rat-gif-5360010",
+    "https://tenor.com/view/dance-gym-mustache-gif-5477113",
+    "https://tenor.com/view/forrest-gump-running-me-when-im-late-tom-hanks-gif-5144739",
     "Veel plezier!",
     "Succes!",
     "Geniet ervan!",
@@ -269,7 +288,9 @@ function gotMessage(msg){
                 msg.channel.send("Laat het je smaken " + msg.author.username);
             }
             if(msg.content.includes("slapen")||msg.content.includes("Slapen")||msg.content.includes("slaap")||msg.content.includes("Slaap")||(msg.content.includes("toppen")&&msg.content.includes("vandaag"))){
-                msg.channel.send("Slaapwel " + msg.author.username);
+                var random = Math.floor( Math.random() * slaapzinnen.length);
+                var zin = slaapzinnen[random]
+                msg.channel.send(zin);//+ msg.author.username);
             }
             if (msg.content.includes("fack") || msg.content.includes("Fack") || msg.content.includes("FACK") || msg.content.includes("fuck")|| msg.content.includes("Fuck")
                || msg.content.includes("FUCK")|| msg.content.includes("GVD")|| msg.content.includes("gvd")|| msg.content.includes("verdomme")|| msg.content.includes("Godverdomme")
