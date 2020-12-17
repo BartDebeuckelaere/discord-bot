@@ -282,7 +282,7 @@ function gotMessage(msg){
             if (msg.content.includes("sport")|| msg.content.includes("Sport")||msg.content.includes("lopen")||msg.content.includes("Lopen")){
                 var random = Math.floor( Math.random() * sportzinnen.length);
                 var zin = sportzinnen[random]
-                msg.channel.send(zin+ msg.author.username);
+                msg.channel.send(zin);//+ msg.author.username);
             }
             if( (msg.content.includes("ik") || msg.content.includes("Ik") || msg.content.includes("k") || msg.content.includes("K")) && msg.content.includes("ga") && msg.content.includes("eten")){
                 msg.channel.send("Laat het je smaken " + msg.author.username);
