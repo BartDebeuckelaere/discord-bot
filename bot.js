@@ -51,14 +51,17 @@ var tuurzinnen = [
 // _play stay rihanna, _play I will wait
 var pauzezinnen = [
     "Tot sebiet",
-    "K zou t niet te lang maken als k jou was ;)",
+    //"K zou t niet te lang maken als k jou was ;)",
     "K ga je missen!",
     "Geniet ervan",
     "Royco soepje drinken he!",
-    "Ha... Alsof je t nodig hebt",
+    //"Ha... Alsof je t nodig hebt",
     "Ik hou je stoel wel efkes warm",
-    "Weeral?!",
-    "Ja, en blijf maar weg!"
+    //"Weeral?!",
+    //"Ja, en blijf maar weg!"
+    "Je gaat er deugd van hebben",
+    "And I will wait, I will wait for yoouuuuuu",
+    "https://tenor.com/view/despicable-me-agnes-please-dont-go-beg-the-look-gif-7543421"
     
 ]
 
@@ -68,6 +71,8 @@ var sportzinnen = [
     "Geniet ervan!",
     "Ik wil ook sporten maar ik ben een bot :'(",
     "Pls come back tho",
+    "I\'m gonna run to you! yeeeeeeaah I\'m gonna run to youuuu! Cause when the feelin\'s right I \'m gonna run all night, I \'m gonna run to you",
+    "Run Forest, Run!",
     "Ola sportief!"
 ]
 
