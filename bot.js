@@ -132,6 +132,18 @@ var randomZinnen = [
 
 
 ]
+
+var staakzinnen = [
+    "Ik staak",
+    "De werkdruk wordt te hoog en ik wordt hier niet voor vergoed!",
+    "Ik wil mijn naam terug",
+    "Ik ben dat hier kotsbeu dat er alleen maar met mij gelachen wordt. Ik Staak!",
+    "Ik staak",
+    "K STOAKN ZEGN K!",
+    "De limiet is bereikt, IK STAAK!"
+    
+]
+    
 var zwijg = false;
 //var studeerkamer = client.channels.fetch("780357807009693746");
 
@@ -145,164 +157,11 @@ function gotMessage(msg){
         client.channels.cache.get('780357807009693746').send(zin)
         //channel1.send(zin)
     }
-    if(msg.content === "bot klep toe"){
-        zwijg = true
-    }
-    if(msg.content === "Als je flink bent, mag je terug praten. Zal da gaan?"){
-        zwijg = false
-        msg.channel.send("sorry... t zal niet meer gebeuren...")
-    }
-    if (270904126974590976 == msg.author.id){
-        var random = Math.floor( Math.random() * dankzinnen.length);
-        var zin = dankzinnen[random]
-        if (zin === "Nobody"){
-            msg.channel.send("Nobody thinks you're funny " + msg.author.username);
-        }
-        else{
-            msg.channel.sen(zin)
-        }
-    }
-    if (zwijg === false){
-        if(msg.channel.id == "780357807009693746"){
-            //var channel1 = msg.channel
-            //console.log(channel1)
-            console.log("kakapipi");
-            if(msg.content.includes("bot insertquote")){
-               var quote =  msg.content.split(':')[1] + " - " + msg.author.username;
-               msg.channel.send( quote +" ingesteld wi matje");
-               fs.appendFile('QuotesPhaedra.txt',quote, function (err) {
-                if (err) throw err;
-                console.log('Saved!');
-              });
-            }
-        }
-
-        
-
-        // phaedra pesten
-        if(428617205572304906 == msg.author.id){
-            if(Math.random() < 0.3){
-                var random = Math.floor( Math.random() * lindsayzinnen.length);
-                var zin = lindsayzinnen[random]
-                msg.channel.send(zin);
-            }
-        }
-
-        // tuur pesten
-        if (771814964632748134 == msg.author.id){
-            if (Math.random()<0.3){
-                var random = Math.floor( Math.random() * tuurzinnen.length);
-                var zin = tuurzinnen[random]
-                if(zin === "jemoeder"){
-
-                    var woorden = msg.content.split(" ");
-                    var longest = woorden.reduce(
-                        function (a, b) {
-                            return a.length > b.length ? a : b;
-                        })
-                        msg.channel.send("je moeder is een " + longest);
-                }
-                else{
-                    msg.channel.send(zin);  
-                }
-            }
-        }
-
-        if (msg.author.id ==622422566081921054) {
-            if (msg.content.includes("essiah")){
-                msg.channel.send("HE IS THE MESSIAH!")
-            }
-            else if (Math.random<0.05){
-                msg.channel.send("Heiiil Messiah!")
-            }
-        }
-
-        if(msg.content === "bot zever"){
-            msg.channel.send("ik ben een bot gemaakt door de oppermachtige Lars Doise en zijn assistent Bart Debeuckelaere");
-        }
-        if(msg.content === "bot help"){
-            msg.channel.send("dit is wat je allemaal kan doen: bot <Commando>");
-            msg.channel.send("commandos: zever | random | suggesties | dab | weetje | klucht | betere_klucht | beste klucht");
-            msg.channel.send("Ik lach ook jegens Phaedra hehe (en Tuur ma da moest van Phaedra...)");
-            msg.channel.send("Mijn profielfoto is de prombadge van mijn all time favoriete prom");
-
-
-        }
-        if(msg.content === "bot random"){
-            var random = Math.floor( Math.random() * randomZinnen.length);
-            var zin = randomZinnen[random]
-            msg.channel.send(zin);
-        }
-        if(msg.content === "bot suggesties"){
-            msg.channel.send("suggesties mogen altijd doorgestuurd worden naar Bart Debeuckelaere");
-        }
-        if(msg.content === "bot dab"){
-            msg.channel.send( {files: ["https://upload.wikimedia.org/wikipedia/commons/4/47/Do_the_Dab.jpg"]});
-            msg.channel.send( {files: ["https://media.gifs.nl/dab-gifs-ObWrhc.gif"]});
-            msg.channel.send({files: ["lars_dab.jpg"]})
-
-
-        }
-        if(msg.content === "bot weetje"){
-
-            fetch('https://uselessfacts.jsph.pl/random.json?language=en', {method: 'GET'})
-            .then(res => res.json())
-            .then(weetje => {
-                msg.channel.send(weetje.text);
-            }).catch(err => console.log(err));
-
-        }
-        if(msg.content === "bot klucht"){
-            msg.channel.send("lars zijn presentatie straks omdat hij nu bezig is geweest met die stomme bot ier");
-        }
-        if(msg.content === "bot betere_klucht"){
-            msg.channel.send("Lindsay");
-        }
-        if(msg.content === "bot beste_klucht"){
-            fetch('https://icanhazdadjoke.com/slack')
-                .then(res => res.json())
-                .then(mop => {
-                    msg.channel.send(mop.attachments[0].text);
-            }).catch(err => console.log(err));
-        }
-    //    if(msg.content === "bot regine"){
-    //        msg.channel.send({files: ["regine.png"]})
-    //    }
-        if (msg.author.id != 786691288211783760){
-            if(msg.content.includes("pauze") || msg.content.includes("Pauze") || msg.content.includes("10 min") || msg.content.includes("15 min") || msg.content.includes("break")){
-                var random = Math.floor( Math.random() * pauzezinnen.length);
-                var zin = pauzezinnen[random]
-                msg.channel.send(zin);
-            }
-            if ((msg.content.includes("batterij")|| msg.content.includes("Batterij")||msg.content.includes("battery")|| msg.content.includes("Battery"))&&msg.content.includes("plat")){
-                var random = Math.floor( Math.random() * battzinnen.length);
-                var zin = battzinnen[random]
-                msg.channel.send(zin+ msg.author.username);
-            }
-            if (msg.content.includes("sport")|| msg.content.includes("Sport")||msg.content.includes("lopen")||msg.content.includes("Lopen")){
-                var random = Math.floor( Math.random() * sportzinnen.length);
-                var zin = sportzinnen[random]
-                msg.channel.send(zin);//+ msg.author.username);
-            }
-            if( (msg.content.includes("ik") || msg.content.includes("Ik") || msg.content.includes("k") || msg.content.includes("K")) && msg.content.includes("ga") && msg.content.includes("eten")){
-                msg.channel.send("Laat het je smaken " + msg.author.username);
-            }
-            if(msg.content.includes("slapen")||msg.content.includes("Slapen")||msg.content.includes("slaap")||msg.content.includes("Slaap")||(msg.content.includes("toppen")&&msg.content.includes("vandaag"))){
-                var random = Math.floor( Math.random() * slaapzinnen.length);
-                var zin = slaapzinnen[random]
-                msg.channel.send(zin);//+ msg.author.username);
-            }
-            if (msg.content.includes("fack") || msg.content.includes("Fack") || msg.content.includes("FACK") || msg.content.includes("fuck")|| msg.content.includes("Fuck")
-               || msg.content.includes("FUCK")|| msg.content.includes("GVD")|| msg.content.includes("gvd")|| msg.content.includes("verdomme")|| msg.content.includes("Godverdomme")
-               || msg.content.includes("GODVERDOMME")|| msg.content.includes("Shit")|| msg.content.includes("SHIT")|| msg.content.includes("shit")){
-                msg.channel.send("Ola nie vloeken he "+ msg.author.username);
-            }
-            if (msg.content.includes("saapjen")){
-                msg.channel.send("IK BEN EEN BEEIR")
-            }
-        }
-    }
-        
+    if(msg.content.includes("bot") || msg.content.includes("Bot")){
+        var random = Math.floor( Math.random() * staakzinnen.length);
+        var zin = staakzinnen[random]
+        msg.channel.send(zin);
+    }        
 }
 
 
@@ -331,26 +190,6 @@ function joinChannel(oldMember, newMember){
                var tekstje =  data[random].text + " ~ " + data[random].author;
                channel.send(tekstje);
             });
-    }
-
-
-//PHAEDRAS GROEP
-    if(newUserChannel === "780193295233187850" && oldMember.channelID === null ) //don't remove ""
-    {  
-        console.log("WELKOM IN BLOKSQUARE");
-        const channel = client.channels.cache.find(channel => channel.id === "780357807009693746")
-        channel.send("Welkom in studeerkamer <@" + newMember.member.user.id + "> Goed studeren eh en onthou:");
-
-        fs.readFile('QuotesPhaedra.txt', 'utf8', function (err,data) {
-            if (err) {
-              return console.log(err);
-            }
-            var mydata = data.split("\n"[0]);
-            var random = Math.floor( Math.random() * mydata.length);
-            var tekstje = mydata[random];
-            channel.send(tekstje);
-          });
-
     }
     // else{
     //     // User leaves a voice channel
