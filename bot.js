@@ -135,7 +135,7 @@ var randomZinnen = [
 
 var staakzinnen = [
     "Ik staak",
-    "De werkdruk wordt te hoog en ik wordt hier niet voor vergoed!",
+    "De werkdruk wordt te hoog en ik word hier niet voor vergoed!",
     "Ik wil mijn naam terug",
     "Ik ben dat hier kotsbeu dat er alleen maar met mij gelachen wordt. Ik Staak!",
     "Ik staak",
