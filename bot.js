@@ -161,6 +161,9 @@ function gotMessage(msg){
         if (msg.content.includes("wil")) {
             msg.channel.send("En ik wil mijn naam terug")
         }
+        else if (msg.content.includes("terug")){
+            msg.channel.send("Krijg ik mijn naam dan terug?!")
+        }
         else {
             var random = Math.floor( Math.random() * staakzinnen.length);
             var zin = staakzinnen[random]
