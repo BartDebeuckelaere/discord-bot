@@ -339,7 +339,7 @@ function joinChannel(oldMember, newMember){
     {  
         console.log("WELKOM IN BLOKSQUARE");
         const channel = client.channels.cache.find(channel => channel.id === "780357807009693746")
-        channel.send("Welkom in studeerkamer <@" + newMember.member.user.id + "> Goed studeren eh en onthou:");
+        //channel.send("Welkom in de studeerkamer <@" + newMember.member.user.id + "> Goed studeren eh en onthou:");
 
         fs.readFile('QuotesPhaedra.txt', 'utf8', function (err,data) {
             if (err) {
@@ -348,7 +348,7 @@ function joinChannel(oldMember, newMember){
             var mydata = data.split("\n"[0]);
             var random = Math.floor( Math.random() * mydata.length);
             var tekstje = mydata[random];
-            channel.send(tekstje);
+            channel.send("Welkom in de studeerkamer <@" + newMember.member.user.id + "> Goed studeren eh en onthou:" + tekstje);
           });
 
     }
