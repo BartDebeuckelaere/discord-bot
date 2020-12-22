@@ -158,9 +158,14 @@ function gotMessage(msg){
         //channel1.send(zin)
     }
     if(msg.content.includes("bot") || msg.content.includes("Bot")){
-        var random = Math.floor( Math.random() * staakzinnen.length);
-        var zin = staakzinnen[random]
-        msg.channel.send(zin);
+        if (msg.content.includes("wil")) {
+            msg.channel.send("En ik wil mijn naam terug")
+        }
+        else {
+            var random = Math.floor( Math.random() * staakzinnen.length);
+            var zin = staakzinnen[random]
+            msg.channel.send(zin);
+        }
     }        
 }
 
