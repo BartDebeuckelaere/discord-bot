@@ -149,7 +149,7 @@ function gotMessage(msg){
         zwijg = true
     }
     if(msg.content === "test"){
-        console.log(client.name)
+        console.log(client.name == undefined)
     }
     if(msg.content === "Als je flink bent, mag je terug praten. Zal da gaan?"){
         zwijg = false
