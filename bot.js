@@ -16,7 +16,16 @@ function readykaka(){
     console.log('ik ben klaaaar');
     client.user.setActivity("typ bot")
 }
-
+var staakzinnen = [
+    "Ik staak",
+    "De werkdruk wordt te hoog en ik word hier niet voor vergoed!",
+    "Ik wil mijn naam terug",
+    "Ik ben dat hier kotsbeu dat er alleen maar met mij gelachen wordt. Ik Staak!",
+    "Ik staak",
+    "K STOAKN ZEGN K!",
+    "De limiet is bereikt, IK STAAK!"
+    
+]
 var lindsayzinnen = [
     "Lindsay, Lindsay, Lindsay,...",
     "Wij kunnen jou niet serieus nemen omdat wij aliens zijn van de planeet Zork mwuhahaha. Allee werk ma wa verder.",
@@ -148,9 +157,9 @@ function gotMessage(msg){
     if(msg.content === "bot klep toe"){
         zwijg = true
     }
-    if(msg.content === "test"){
-        console.log(client.name == undefined)
-    }
+    //if(msg.content === "test"){
+    //    console.log(client.name == undefined)
+    //}
     if(msg.content === "Als je flink bent, mag je terug praten. Zal da gaan?"){
         zwijg = false
         msg.channel.send("sorry... t zal niet meer gebeuren...")
@@ -165,7 +174,19 @@ function gotMessage(msg){
             msg.channel.sen(zin)
         }
     }
-    if (zwijg === false){
+    if (client.name !== undefined){
+        if(msg.content.includes("bot") || msg.content.includes("Bot")){
+            if (msg.content.includes("wil")) {
+                msg.channel.send("En ik wil mijn naam terug")
+            }
+            else {
+                var random = Math.floor( Math.random() * staakzinnen.length);
+                var zin = staakzinnen[random]
+                msg.channel.send(zin);
+            }
+        }
+    }
+    if (zwijg === false && client.name == undefined){
         if(msg.channel.id == "780357807009693746"){
             //var channel1 = msg.channel
             //console.log(channel1)
