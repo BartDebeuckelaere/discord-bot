@@ -148,6 +148,9 @@ function gotMessage(msg){
     if(msg.content === "bot klep toe"){
         zwijg = true
     }
+    if(msg.content === "test"){
+        console.log(client.name)
+    }
     if(msg.content === "Als je flink bent, mag je terug praten. Zal da gaan?"){
         zwijg = false
         msg.channel.send("sorry... t zal niet meer gebeuren...")
